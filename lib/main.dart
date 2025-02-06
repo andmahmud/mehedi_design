@@ -10,6 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "Mehedi Design", home: HomeScreen());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Mehedi Design",
+      home: HomeScreen(),
+    );
   }
 }

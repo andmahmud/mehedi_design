@@ -5,6 +5,12 @@ class Favrite extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text("Favrite")),
+        backgroundColor: Colors.teal,
+        foregroundColor: Colors.white,
+      ),
+    );
   }
 }

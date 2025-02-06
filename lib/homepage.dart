@@ -26,47 +26,24 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_selectedIndex],
-      bottomNavigationBar: Container(
-        decoration: const BoxDecoration(
-          color: Colors.green,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30), // Rounded top-left corner
-            topRight: Radius.circular(30), // Rounded top-right corner
-          ),
-          // boxShadow: [
-          //   BoxShadow(
-          //     color: Colors.black26, // Soft shadow effect
-          //     blurRadius: 5,
-          //     spreadRadius: 2,
-          //     offset: Offset(0, -2), // Shadow above the navbar
-          //   ),
-          // ],
-        ),
-        child: ClipRRect(
-          // Ensures the rounded corners are properly clipped
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(30),
-            topRight: Radius.circular(30),
-          ),
-          child: BottomNavigationBar(
-            backgroundColor: Colors.green,
-            elevation: 0, // Removes default shadow
-            currentIndex: _selectedIndex,
-            selectedItemColor: Colors.white,
-            unselectedItemColor: Colors.black, // Unselected items in black
-            onTap: _onItemTapped,
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: "Image"),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.article),
-                label: "Video",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.video_library),
-                label: "Favrite",
-              ),
-            ],
-          ),
+      bottomNavigationBar: ClipRRect(
+        // Ensures the rounded corners are properly clipped
+        borderRadius: const BorderRadius.all(Radius.circular(30)),
+        child: BottomNavigationBar(
+          backgroundColor: Colors.green,
+          elevation: 0, // Removes default shadow
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.black, // Unselected items in black
+          onTap: _onItemTapped,
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.image), label: "Image"),
+            BottomNavigationBarItem(icon: Icon(Icons.videocam), label: "Video"),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.favorite),
+              label: "Favrite",
+            ),
+          ],
         ),
       ),
     );

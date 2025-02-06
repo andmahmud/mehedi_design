@@ -5,6 +5,13 @@ class image extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text("Image")),
+
+        backgroundColor: Colors.teal,
+        foregroundColor: Colors.white,
+      ),
+    );
   }
 }
