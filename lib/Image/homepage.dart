@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mehedi_design/Favrite.dart';
-import 'package:mehedi_design/Image.dart';
+import 'package:mehedi_design/Image/Image.dart';
 import 'package:mehedi_design/video.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = [image(), Video(), Favrite()];
+  final List<Widget> _pages = [ImageScreen(), Video(), Favrite()];
 
   void _onItemTapped(int index) {
     setState(() {
