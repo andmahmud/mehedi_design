@@ -28,9 +28,12 @@ class _HomeScreenState extends State<HomeScreen> {
       body: _pages[_selectedIndex],
       bottomNavigationBar: ClipRRect(
         // Ensures the rounded corners are properly clipped
-        borderRadius: const BorderRadius.all(Radius.circular(30)),
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
+        ),
         child: BottomNavigationBar(
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.teal,
           elevation: 0, // Removes default shadow
           currentIndex: _selectedIndex,
           selectedItemColor: Colors.white,
