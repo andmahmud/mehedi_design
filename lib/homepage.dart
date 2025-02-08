@@ -33,10 +33,10 @@ class _HomeScreenState extends State<HomeScreen> {
           topRight: Radius.circular(30),
         ),
         child: BottomNavigationBar(
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.white,
           elevation: 0, // Removes default shadow
           currentIndex: _selectedIndex,
-          selectedItemColor: Colors.white,
+          selectedItemColor: Colors.brown,
           unselectedItemColor: Colors.black, // Unselected items in black
           onTap: _onItemTapped,
           items: const [

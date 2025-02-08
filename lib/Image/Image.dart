@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mehedi_design/Image/EyelinerBody.dart';
 import 'package:mehedi_design/Image/HairBody.dart';
+import 'package:mehedi_design/Image/Lipsticks.dart';
 import 'package:mehedi_design/Image/MehndiBody.dart';
+import 'package:mehedi_design/Image/NailBody.dart';
 import 'package:mehedi_design/Image/TattooBody.dart';
-import 'package:mehedi_design/NailBody.dart'; // NailBody ইম্পোর্ট করার সময় বানান নিশ্চিত করুন
 
 class ImageScreen extends StatefulWidget {
   const ImageScreen({super.key});
@@ -19,6 +20,7 @@ class _ImageScreenState extends State<ImageScreen> {
     "Tattoo",
     "Hair",
     "Eyeliner",
+    "Lipsticks",
   ];
 
   String selectedCategory = "Mehndi"; // Default selected category
@@ -95,6 +97,8 @@ class _ImageScreenState extends State<ImageScreen> {
         return const HairBody();
       case "Eyeliner":
         return const EyelinerBody();
+      case "Lipsticks":
+        return const Lipsticks();
       default:
         return const MehndiBody();
     }
