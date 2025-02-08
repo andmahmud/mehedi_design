@@ -51,28 +51,27 @@ class _ImageScreenState extends State<ImageScreen> {
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal, // Horizontal scrolling
               child: Row(
-                children:
-                    categories.map((category) {
-                      final bool isSelected = category == selectedCategory;
-                      return GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            selectedCategory = category;
-                          });
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 8.0),
-                          child: Chip(
-                            label: Text(category),
-                            backgroundColor:
-                                isSelected ? Colors.brown : Colors.grey[200],
-                            labelStyle: TextStyle(
-                              color: isSelected ? Colors.white : Colors.black,
-                            ),
-                          ),
+                children: categories.map((category) {
+                  final bool isSelected = category == selectedCategory;
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedCategory = category;
+                      });
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: Chip(
+                        label: Text(category),
+                        backgroundColor:
+                            isSelected ? Colors.brown : Colors.grey[200],
+                        labelStyle: TextStyle(
+                          color: isSelected ? Colors.white : Colors.black,
                         ),
-                      );
-                    }).toList(),
+                      ),
+                    ),
+                  );
+                }).toList(),
               ),
             ),
           ),

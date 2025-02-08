@@ -7,9 +7,28 @@ class Video extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("video")),
-        backgroundColor: Colors.teal,
-        foregroundColor: Colors.white,
+        title: const Text(
+          "Video",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 0,
+        leading: IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.settings,
+              color: Colors.black,
+            )),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.help_outline,
+                color: Colors.black,
+              )),
+        ],
       ),
     );
   }
