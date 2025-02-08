@@ -76,7 +76,7 @@ class _ImageScreenState extends State<ImageScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 10),
+          // const SizedBox(height: 10),
           // Dynamic Body based on Selected Category
           Expanded(child: getCategoryBody(selectedCategory)),
         ],

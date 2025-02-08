@@ -7,11 +7,11 @@ class MehndiBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Map<String, String>> imageDetails = [
       {'path': 'assets/images/back_hand.png', 'label': 'Back Hand'},
-      {'path': 'assets/images/back_hand.png', 'label': 'Front Hand'},
-      {'path': 'assets/images/back_hand.png', 'label': 'Finger'},
-      {'path': 'assets/images/back_hand.png', 'label': 'Bridal'},
-      {'path': 'assets/images/back_hand.png', 'label': 'Foot'},
-      {'path': 'assets/images/back_hand.png', 'label': 'Arm'},
+      {'path': 'assets/images/Front_Hand.png', 'label': 'Front Hand'},
+      {'path': 'assets/images/Finger.png', 'label': 'Finger'},
+      {'path': 'assets/images/Bridal.png', 'label': 'Bridal'},
+      {'path': 'assets/images/Foot.png', 'label': 'Foot'},
+      {'path': 'assets/images/Arm.png', 'label': 'Arm'},
     ];
 
     return GridView.builder(
